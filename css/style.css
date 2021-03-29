@@ -1,0 +1,194 @@
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    background: hsl(0, 96%, 66%);
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+header .socialmidia {
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+}
+
+header .socialmidia a i {
+    color: white;
+}
+
+header .socialmidia a i:hover {
+    color: var(--Blue);
+    transition: 0.5s ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    color: #ffffff;
+    padding: 0px 150px;
+}
+section {
+    max-width: 100%;
+    width: 50%;
+}
+
+.Learn {
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.Learn p {
+    line-height: 25px;
+}
+
+.heading {
+    width: 90%;
+    background-color: var(--Blue);
+    padding: 10px 20px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.heading span {
+    font-weight: 600;   
+}
+
+#formulario {
+    width: 90%;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+   
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    border: 1px solid #eeffee;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+button {
+    text-transform: uppercase;
+    background-color: var(--Green);
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .9s; 
+}
+
+button:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+form p {
+    color: var(--Grayish-Blue);
+    font-size: 10px;
+    margin: auto;
+}
+
+form span {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+input:focus,
+button:focus {
+   outline: none;
+}
+
+.error {
+    border: 2px solid var(--Red);
+    background: url('/images/icon-error.svg') no-repeat;
+    background-position: 90% 50%;
+}
+.error-text {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: auto;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.success {
+    border: 2px solid var(--Green);
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        padding: 40px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Red);
+        background-image: url(/images/bg-intro-mobile.png);
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .heading {
+        padding: 15px 50px;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Learn {
+        text-align: center;
+        padding: 40px 0px 60px;
+    }
+
+    form p {
+        text-align: center;
+    }
+   
+}
